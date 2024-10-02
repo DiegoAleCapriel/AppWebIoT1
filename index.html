@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP8266 WebServer - Micrófono</title>
+    <link rel="stylesheet" href="css/estilo_pagina.css">
+</head>
+<body>
+
+    <div class="top-container">
+        <img src="imagenes/conexinoDesconectada.png" class="wifi-logo" alt="Wi-Fi desconectado">
+        <input type="text" placeholder="Introduce la IP" id="ip-input">
+        <button id="connect-btn">Conectar</button>
+    </div>
+
+    <div id="door-state" class="door-state">
+        Puerta cerrada
+    </div>
+
+    <h1>ESP8266 WebServer</h1>
+    <h2>Control de Puerta Inalámbrica</h2>
+
+    <img src="imagenes/microfonoApagado.png" id="microphone-icon" class="microphone" alt="Micrófono">
+
+    <div class="status">
+        <strong id="door-status">Puerta cerrada</strong>
+    </div>
+
+    <div class="button-container">
+        <button id="send-btn">Enviar</button>
+        <button class="cancel" id="cancel-btn">Cancelar</button>
+    </div>
+
+    <script src="scripts/reconocimientoDeVoz.js"></script>
+    <script type="module" src="scripts/envioDeComandos.js"></script>
+
+</body>
+</html>
